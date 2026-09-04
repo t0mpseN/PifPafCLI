@@ -6,11 +6,13 @@ public class Program
     {
         Console.WriteLine("Welcome to PifPaf!");
 
-        Deck deck = new Deck();
-        deck.Shuffle();
+        //Deck deck = new Deck();
+        //deck.Shuffle();
 
-        foreach (Card card in deck.Cards)   
-            Console.WriteLine($"{card.Label} | {card.Value} | {card.Suit.ToString()}");
+        //foreach (Card card in deck.Cards)   
+        //    Console.WriteLine($"{card.Label} | {card.Value} | {card.Suit.ToString()}");
+
+        GameManager gameManager = new GameManager();
     }
 }
 

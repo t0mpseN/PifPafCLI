@@ -19,30 +19,50 @@ public class Card
         _value = value;
         _suit = suit;
 
-        _label = GetLabel(value);
+        _label = GetLabel(value, suit);
     }
 
-    
+
     // METHODS ==========
-    public string GetLabel(int value)
+    public string GetLabel(int value, Suit suit)
     {
+        string label = "";
         if (value == 0)
-            return "JOKER";
-        if (value <= 10 )
-            return value.ToString();
+            label += "JOKER";
+        if (value <= 10)
+            label += value.ToString();
         else
         {
             switch (value)
             {
                 case (11):
-                    return "J";
+                    label += "J";
+                    break;
                 case (12):
-                    return "Q";
+                    label += "Q";
+                    break;
                 case (13):
-                    return "K";
+                    label += "K";
+                    break;
             }
         }
 
-        throw new Exception("Couldn't get a valid label for this card value.");
+        switch (suit)
+        {
+            case (Suit.Hearts):
+                label += "♥";
+                break;
+            case (Suit.Diamonds):
+                label += "♦";
+                break;
+            case (Suit.Clubs):
+                label += "♣";
+                break;
+            case (Suit.Spades):
+                label += "♠";
+                break;
+        }
+
+        return label;
     }
 }
