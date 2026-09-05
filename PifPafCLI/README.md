@@ -1,0 +1,4 @@
+- [ ] Finish PifPaf
+- [ ] Improve CLI visuals
+- [ ] Architecture refactoring for multiple games
+- [ ] Online multiplayer
